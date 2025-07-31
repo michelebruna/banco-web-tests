@@ -2,6 +2,7 @@ describe('Login', () => {
   beforeEach(() => {
     //Arrange
     cy.visit('http://localhost:4000')
+    //cy.screenshot('apos-visitar-pagina')
   });
 
   it('Login com dados válidos deve permitir entrada no sistema', () => {
@@ -9,6 +10,7 @@ describe('Login', () => {
     //Act    
     cy.get('#username').click().type('julio.lima') //.type é o comando para digitar
     cy.get('#senha').click().type('123456')
+    //cy.screenshot('apos-preencher-dados-validos')
     cy.contains('button', 'Entrar').click()
     
     //Assert
